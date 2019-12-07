@@ -2,7 +2,7 @@
 
 # dependencies
 node_modules
-*/node_modules
+AntdPro
 
 # testing
 coverage
@@ -37,4 +37,5 @@ yarn-error.log*
 *.sln
 *.sw*
 *.mmap
+*.xmind
 *.svg
