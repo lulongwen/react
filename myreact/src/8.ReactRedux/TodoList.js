@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { actionChangeValue, actionAddItem, actionDeleteItem } from "./store/actionCreators";
+import { actionChangeValue, actionAddItem, actionDeleteItem } from "./store/actionCreators"
 
 // 优化成 UI 组件，提高组件性能
 class TodoList1 extends Component {

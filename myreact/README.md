@@ -1,7 +1,17 @@
 # React 实战 - 卢珑文
 
 ### npm install & yarn add
+* [npx create-react-app demo](https://create-react-app.dev/docs/getting-started)
 ```bash
+# 初始化项目
+  yarn create react-app my-app
+
+  // 选择模板
+  npx create-react-app my-app --template [template-name]
+
+  // typescript
+  npx create-react-app my-app --template typescript
+
   yarn add axios immutable redux react-transition-group styled-components redux-thunk
 
   yarn add styled-components
@@ -62,7 +72,7 @@ C:\Windows\System32\drivers\etc\hosts 设置
 * https://reactcommunity.org/react-transition-group/switch-transition
 * https://reactcommunity.org/react-transition-group/transition-group
 
-```jsx harmony
+```jsx
   <CSSTransition
     unmountOnExit
     in={this.state.show}
