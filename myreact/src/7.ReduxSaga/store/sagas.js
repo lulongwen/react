@@ -1,7 +1,8 @@
 import { takeEvery, put } from 'redux-saga/effects'
+import axios from "axios"
+
 import { GET_LIST } from "./actionTypes"
 import * as $ from './actionCreators'
-import axios from "axios"
 import store from './index'
 
 function* getAjaxList () {
