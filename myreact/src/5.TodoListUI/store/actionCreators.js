@@ -11,3 +11,8 @@ export const actionChangeList = () => ({
 export const actionDeleteItem = item => ({
   type: $.DELETE_ITEM, item
 })
+
+// ajax 获取数据后修改 list
+export const actionGetList = data => ({
+  type: $.GET_LIST, data
+})

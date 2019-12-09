@@ -26,5 +26,11 @@ export default (state = State, action) => {
     const list = state.list.filter(item => item !== action.item)
     return Object.assign({}, state, { list })
   }
+
+  // ajax 异步 修改 reducer
+  else if (type === $.GET_LIST) {
+    return Object.assign({}, state, { list: action.data })
+  }
+  
   return state
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-// 引入 TodoListUI UI组件
-// index.js 是容器组件
+// 引入 TodoListUI UI组件，index.js 是容器组件
 import TodoListUI from "./TodoListUI"
 
 // actionCreates 统一管理 reducer 的 action， 提高代码的可维护性
@@ -38,6 +37,13 @@ class App extends Component {
       fnSubmit={this.fnSubmit}
       fnDeleteItem={this.fnDeleteItem}
     />
+  }
+  
+  // 页面渲染完成后，异步操作的代码，从组件中移除，移到 action
+  componentDidMount () {
+    // action 返回一个函数
+    const action = $.getList()
+    store.dispatch(action)
   }
   
   fnChange (ev) {

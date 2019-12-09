@@ -46,6 +46,7 @@
 
 
 ## Charles 模拟接口数据
+* ` localhost.charlesproxy.com `
 * Charles捕获不到localhost请求，前端数据404问题
 * [http://localhost.charlesproxy.com](https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/)
 ```bash
@@ -76,3 +77,8 @@ C:\Windows\System32\drivers\etc\hosts 设置
 
 ## Chrome Reduce
 * Reduce-devTools https://github.com/zalmoxisus/redux-devtools-extension
+* 1.2 Advanced store setup
+
+
+## Redux-thunk 中间件进行 ajax 发送
+* https://github.com/reduxjs/redux-thunk
