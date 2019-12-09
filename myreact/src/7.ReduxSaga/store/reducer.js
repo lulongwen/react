@@ -2,7 +2,7 @@ import * as $ from './actionTypes'
 
 const State = {
   value: '123',
-  list: ['ok', 'yes', 'good', 'fest']
+  list: []
 }
 
 // state 上一次的数据，只读，不能修改
@@ -12,7 +12,8 @@ const State = {
 export default (state = State, action) => {
   const { type, value='' } = action
   
-  console.log(state, action)
+  // console.log(state, action)
+  // action {type: "GET_LIST"}
   if (type === $.CHANGE_VALUE) {
     return Object.assign({}, state, { value })
   }
@@ -28,8 +29,11 @@ export default (state = State, action) => {
   }
 
   // ajax 异步 修改 reducer
-  else if (type === $.GET_LIST) {
+  else if (type === $.AJAX_LIST) {
     return Object.assign({}, state, { list: action.data })
+  }
+  else if (type === $.GET_LIST) {
+    console.log('index action getlist')
   }
   
   return state

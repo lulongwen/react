@@ -5,3 +5,4 @@ export const DELETE_ITEM = 'DELETE_ITEM'
 
 // ajax 获取数据
 export const GET_LIST = 'GET_LIST'
+export const AJAX_LIST = 'AJAX_LIST'

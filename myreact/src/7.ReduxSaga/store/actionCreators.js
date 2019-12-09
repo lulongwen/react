@@ -1,6 +1,4 @@
 import * as $ from './actionTypes'
-import axios from "axios";
-import store from "./index";
 
 export const actionChangeValue = value => ({
   type: $.CHANGE_VALUE, value
@@ -14,15 +12,12 @@ export const actionDeleteItem = item => ({
   type: $.DELETE_ITEM, item
 })
 
-// ajax 获取数据后修改 list
-export const actionGetList = data => ({
-  type: $.GET_LIST, data
+// componentWilMount action
+export const actionGetList = () => ({
+  type: $.GET_LIST
 })
 
-// ajax 请求数据，redux-thunk，action 返回一个函数
-export const getList = () => dispath => {
-  axios.get('/api/todolist').then(res => {
-    const action = actionGetList(res.data.list)
-    dispatch(action)
-  })
-}
+// redux-saga ajax 请求在单独的 saga 文件里
+export const actionAjaxList = data => ({
+  type: $.AJAX_LIST, data
+})

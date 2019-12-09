@@ -12,8 +12,10 @@ import './index.css'
 // import App from './Transition/css'
 // import App from './Transition/GroupTransition'
 
-// Antd
-import App from './5.TodoListUI'
+// App
+// import App from './5.TodoListUI'
+// import App from './6.ReduxThunk'
+import App from './7.ReduxSaga'
 
 // PWA progressvie web application
 // import * as serviceWorker from './serviceWorker';

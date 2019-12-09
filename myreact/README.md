@@ -55,14 +55,19 @@ C:\Windows\System32\drivers\etc\hosts 设置
 ```
 
 
-## react-transition-group
+## react-transition-group React 动画
+* https://github.com/reactjs/react-transition-group
+* https://reactcommunity.org/react-transition-group/transition
+* https://reactcommunity.org/react-transition-group/css-transition
+* https://reactcommunity.org/react-transition-group/switch-transition
+* https://reactcommunity.org/react-transition-group/transition-group
 
 ```jsx harmony
   <CSSTransition
     unmountOnExit
     in={this.state.show}
     timeout={1200}
-    className={fade}
+    classNames={fade}
     appear={true}
     onEntered={el => el.style.color='pink'}
   >
@@ -76,9 +81,12 @@ C:\Windows\System32\drivers\etc\hosts 设置
 
 
 ## Chrome Reduce
-* Reduce-devTools https://github.com/zalmoxisus/redux-devtools-extension
-* 1.2 Advanced store setup
+* [Reduce-devTools](https://github.com/zalmoxisus/redux-devtools-extension) 
+* 1.2 Advanced store setup 高级配置
 
 
 ## Redux-thunk 中间件进行 ajax 发送
 * https://github.com/reduxjs/redux-thunk
+
+## Redux-saga
+* https://github.com/redux-saga/redux-saga

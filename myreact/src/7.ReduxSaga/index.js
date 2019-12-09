@@ -20,7 +20,6 @@ class App extends Component {
     this.storeChange = this.storeChange.bind(this)
     
     store.subscribe(this.storeChange)
-    console.log('reducer', this.state)
   }
   
   storeChange () {
@@ -41,8 +40,8 @@ class App extends Component {
   
   // 页面渲染完成后，异步操作的代码，从组件中移除，移到 action
   componentDidMount () {
-    // action 返回一个函数
-    const action = $.getList()
+    // store.dispatch sagas.js 会捕获到，实际调用的是 yield takeEvery(GET_LIST, getAjaxList)
+    const action = $.actionGetList()
     store.dispatch(action)
   }
   
