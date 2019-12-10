@@ -7,26 +7,33 @@
 	* 丰富的组件
 * 提高开发效率
 	* 前沿的前端技术栈
+	
 
 ```bash
+    npx create-react-app demo # 安装 React
+    yarn create react-app demo
+
 	yarn start
-
 	yarn test
+    yarn eject # 显示 webpack 配置
+	yarn build # 打包
 
-    yarn eject
+yarn add axios react-router
 
-# 打包
-	yarn build
-
-# 显示 yarn 包
-	npm run eject
 ```
+
+
+## 后台管理系统知识点
+* React 全家桶 & Antd
+* 地图和 React 集成
+* 前端图表开发技巧
+* 前端后台架构设计，公共组件封装，后台管理系统开发经验
+
 
 ## 工具文档
 * [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
 * [React documentation React文档](https://reactjs.org/)
 * [代码分割 Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
 
 
 ### `yarn eject`
