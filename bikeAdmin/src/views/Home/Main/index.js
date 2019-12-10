@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Main extends Component {
-  
-  render () {
-    return (
-      <div>Main</div>
-    )
-  }
-  
-}
+const Main = () => (
+  <main className='main'>
+    <div className='main-content'>欢迎学习后台管理系统课程</div>
+  </main>
+)
 
 export default Main

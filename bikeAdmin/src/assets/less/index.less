@@ -8,7 +8,7 @@
     top: 5px;
     display: inline-block;
     margin: 0;
-    color: #fff;
+    color: @colorM;
     font-size: 22px;
   }
   > img {
@@ -18,15 +18,58 @@
 }
 
 .header {
-  background-color: @colorM
+  background-color: @colorM;
+  overflow: hidden;
   .header-top {
-
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-align: right;
+    a {
+      margin-left: 20px;
+    }
   }
 
-  .breadcrumb {
+  .header-subnav {
     height: 40px;
     line-height: 40px;
     padding: 0 20px;
-    border-top: 1px solid #f9c700;
+    border-top: 1px solid @colorA;
+    .header-title {
+      text-align: center;
+      font-size: @fontC;
+      &::after {
+        position: absolute;
+        content: '';
+        left: 73px;
+        border-top: 9px solid @colorA;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+      }
+    }
+    .header-weather {
+      text-align: right;
+      font-size: 14px;
+    }
   }
+}
+
+.main {
+    position: relative;
+    padding: 0 20px;
+  .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh);
+    background-color: @colorL;
+    overflow: auto;
+  }
+}
+
+.footer {
+  height: 100px;
+  padding: 40px 0;
+  text-align: center;
+  color: @colorJ;
 }

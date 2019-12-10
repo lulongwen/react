@@ -14,9 +14,10 @@ class Home extends Component {
         <Col span={3}>
           <AsideMenu />
         </Col>
+        
         <Col span={21}>
           <Header />
-          <Main>Main</Main>
+          <Main />
           <Footer />
         </Col>
       </Row>

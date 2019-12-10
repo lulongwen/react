@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Footer extends Component {
-  
-  render () {
-    return (
-      <div><h5>Footer</h5></div>
-    )
-  }
-  
-}
+const Footer = () => (
+  <footer className='footer'>
+    <h5>版权所有：卢珑文前端架构设计 技术支持：www.lulongwen.com</h5>
+  </footer>
+)
+// class Footer extends Component {}
 
 export default Footer
