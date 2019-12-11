@@ -4,9 +4,9 @@ import { Row, Col } from 'antd'
 import Header from './Header'
 import Footer from './Footer'
 import AsideMenu from "./Menu"
-import Main from './Main'
+// import Home from './Home'
 
-class Home extends Component {
+class Admin extends Component {
   
   render () {
     return (
@@ -17,7 +17,10 @@ class Home extends Component {
         
         <Col span={21}>
           <Header />
-          <Main />
+          <div className="content">
+            {/* <Home /> */}
+            { this.props.children }
+          </div>
           <Footer />
         </Col>
       </Row>
@@ -26,4 +29,4 @@ class Home extends Component {
   
 }
 
-export default Home
+export default Admin

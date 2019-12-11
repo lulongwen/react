@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import { Menu } from 'antd'
 import menuList from '@/router/menuList'
@@ -37,7 +38,9 @@ class AsideMenu extends Component {
         </SubMenu>
       )
     }
-    return <Menu.Item title={title} key={key}>{title}</Menu.Item>
+    return <Menu.Item title={title} key={key}>
+      <NavLink to={`/${key}`}>{title}</NavLink>
+    </Menu.Item>
   })
 }
 
