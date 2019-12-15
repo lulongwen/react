@@ -311,7 +311,16 @@ module.exports = function(webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
-        '@': paths.appSrc, // paths.appSrc变量是该脚手架中已存在，可直接使用
+  
+        // paths.appSrc变量是该脚手架中已存在，可直接使用
+        '@': paths.appSrc,
+        'views': path.resolve(__dirname, `${paths.appSrc}/views`),
+        'components': path.resolve(__dirname, `${paths.appSrc}/components`),
+        'store': path.resolve(__dirname, `${paths.appSrc}/store`),
+        'assets': path.resolve(__dirname, `${paths.appSrc}/assets`),
+        'api': path.resolve(__dirname, `${paths.appSrc}/api`),
+        'utils': path.resolve(__dirname, `${paths.appSrc}/utils`)
+        
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

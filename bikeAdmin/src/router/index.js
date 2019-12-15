@@ -1,30 +1,91 @@
-import React, { Component } from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
 
-import App from '@/views/App'
-import Admin from '@/views/Admin'
-import Login from '@/views/Login'
+// App 根组件
+import App from 'views/App'
+import Admin from 'views/Admin'
+import Home from 'views/Home'
+import Common from 'views/Common'
 
-import Buttons from '@/views/UI/Button'
-import Error404 from '@/views/Error'
+import Buttons from 'views/UI/Button'
+import Modal from 'views/UI/Modal'
+import Loading from 'views/UI/Loading'
+import Notice from 'views/UI/Notice'
+import Message from 'views/UI/Message'
+import Tabs from 'views/UI/Message'
+import Gallery from 'views/UI/Gallery'
+import Carousel from 'views/UI/Carousel'
 
-class Router extends Component {
-  render () {
-    return (
-      <BrowserRouter>
-        <App>
-          <Route path='/login' component={Login} />
-          <Route path='/' render={() =>
-            <Admin>
-              <Route exact path='/ui/buttons' component={Buttons} />
-            </Admin>
-          } />
-          
-          <Route component={Error404}/>
-        </App>
-      </BrowserRouter>
-    )
-  }
-}
+import Login from 'views/Login'
+import Register from 'views/Login/Register'
+
+import Table from 'views/Table'
+import HighTable from 'views/Table/HighTable'
+
+import Order from 'views/Order'
+import OrderDetail from 'views/Order/OrderDetail'
+
+import Bar from 'views/Echarts'
+import Pie from 'views/Echarts/Pie'
+import Line from 'views/Echarts/Line'
+
+import City from 'views/City'
+import RichText from 'views/RichText'
+import User from 'views/User'
+import BikeMap from 'views/Map'
+
+import Role from 'views/Role'
+import Error404 from 'views/Error'
+
+const Router = () => (
+  <BrowserRouter>
+    <App>
+      <Switch>
+        <Route path='/login' component={Login} />
+        <Route path='/register' component={Register} />
+        <Route path='/common' render={ () =>
+          <Common>
+            <Route
+              exact
+              path='common/order/detail:orderId'
+              component={OrderDetail}/>
+          </Common>
+        }/>
+        <Route path='/' render={() =>
+          <Admin>
+            <Switch>
+              <Route path='/home' component={Home} />
+              <Route path='/ui/buttons' component={Buttons} />
+              <Route path='/ui/modal' component={Modal}/>
+              <Route path='/ui/loading' component={Loading}/>
+              <Route path='/ui/notice' component={Notice}/>
+              
+              <Route path='/ui/message' component={Message}/>
+              <Route path='/ui/tabs' component={Tabs}/>
+              <Route path='/ui/gallery' component={Gallery}/>
+              <Route path='/ui/carousel' component={Carousel}/>
+              <Route path='/order' component={Order}/>
+              
+              <Route path='/ui/table' component={Table}/>
+              <Route path='/hightable' component={HighTable}/>
+              <Route path='/richtext' component={RichText}/>
+              <Route path='/city' component={City}/>
+              <Route path='/bikemap' component={BikeMap}/>
+              
+              <Route path='/charts/bar' component={Bar}/>
+              <Route path='/charts/pie' component={Pie}/>
+              <Route path='/charts/line' component={Line}/>
+              <Route path='/user' component={User}/>
+              <Route path='/role' component={Role}/>
+              
+              <Route component={Error404}/>
+              <Redirect to='/home'/>
+            </Switch>
+          </Admin>
+        } />
+      </Switch>
+    </App>
+  </BrowserRouter>
+)
 
 export default Router

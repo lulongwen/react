@@ -4,11 +4,21 @@ import { NavLink } from 'react-router-dom'
 import { Menu } from 'antd'
 import menuList from '@/router/menuList'
 
+// react-redux
+import { connect } from 'react-redux'
+import { } from '../'
+
 const { SubMenu } = Menu
 
 class AsideMenu extends Component {
+  state = {
+    menu: [],
+    defaultKey: '/home',
+    key: ''
+  }
   
   render () {
+    const { menu, key, defaultKey } = this.state
     return (
       <Fragment>
         <header className="logo">
@@ -16,17 +26,21 @@ class AsideMenu extends Component {
           <h1 className='logo-name'>管理后台</h1>
         </header>
         
-        <Menu theme='dark'>
-          { this.state.menu }
+        <Menu
+          defaultSelectedKeys={defaultKey}
+          selectedKeys={ key }
+          theme='dark'
+          onClick={this.menuClick}
+        >
+          { menu }
         </Menu>
       </Fragment>
     )
   }
   
-  componentWillMount() {
+  UNSAFE_componentWillMount () {
     const menu = this.initMenu(menuList)
-    // console.log('menu', menu)
-    this.setState(() => ({ menu }))
+    this.setState(() => ({ menu, defaultKey: '/home' }))
   }
   
   // 初始化菜单渲染列表
@@ -42,6 +56,13 @@ class AsideMenu extends Component {
       <NavLink to={`/${key}`}>{title}</NavLink>
     </Menu.Item>
   })
+  
+  // 菜单点击
+  menuClick = ({ item, key }) => {
+    // ant-menu-item-selected
+    console.log('key', `/${key}`)
+    this.setState(() => ({key: `/${key}`}))
+  }
 }
 
 export default AsideMenu
