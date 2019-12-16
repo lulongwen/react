@@ -8,14 +8,14 @@ import Home from 'views/Home'
 import Common from 'views/Common'
 
 import Buttons from 'views/UI/Button'
-import Modal from 'views/UI/Modal'
-import Loading from 'views/UI/Loading'
-import Notice from 'views/UI/Notice'
-import Message from 'views/UI/Message'
-import Tabs from 'views/UI/Message'
+import Modals from 'views/UI/Modals'
+import Notices from 'views/UI/Notices'
+import Messages from 'views/UI/Messages'
+import Tabs from 'views/UI/Tabs'
 import Gallery from 'views/UI/Gallery'
-import Carousel from 'views/UI/Carousel'
+import Carousels from 'views/UI/Carousels'
 
+import Loadings from 'views/UI/Loadings'
 import Login from 'views/Login'
 import Register from 'views/Login/Register'
 
@@ -50,20 +50,20 @@ const Router = () => (
               path='common/order/detail:orderId'
               component={OrderDetail}/>
           </Common>
-        }/>
+        } />
         <Route path='/' render={() =>
           <Admin>
             <Switch>
               <Route path='/home' component={Home} />
               <Route path='/ui/buttons' component={Buttons} />
-              <Route path='/ui/modal' component={Modal}/>
-              <Route path='/ui/loading' component={Loading}/>
-              <Route path='/ui/notice' component={Notice}/>
+              <Route path='/ui/modals' component={Modals}/>
+              <Route path='/ui/loadings' component={Loadings}/>
+              <Route path='/ui/notices' component={Notices}/>
               
-              <Route path='/ui/message' component={Message}/>
+              <Route path='/ui/messages' component={Messages}/>
               <Route path='/ui/tabs' component={Tabs}/>
               <Route path='/ui/gallery' component={Gallery}/>
-              <Route path='/ui/carousel' component={Carousel}/>
+              <Route path='/ui/carousels' component={Carousels}/>
               <Route path='/order' component={Order}/>
               
               <Route path='/ui/table' component={Table}/>

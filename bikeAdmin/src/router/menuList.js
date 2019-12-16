@@ -22,7 +22,7 @@ const menuList = [
       },
       {
         title: '通知提醒',
-        key: 'ui/notification',
+        key: 'ui/notices',
       },
       {
         title: '全局Message',
@@ -38,7 +38,7 @@ const menuList = [
       },
       {
         title: '轮播图',
-        key: 'ui/carousel',
+        key: 'ui/carousels',
       }
     ]
   },
@@ -72,7 +72,7 @@ const menuList = [
   },
   {
     title: '富文本',
-    key: 'rich'
+    key: 'richtext'
   },
   {
     title: '城市管理',

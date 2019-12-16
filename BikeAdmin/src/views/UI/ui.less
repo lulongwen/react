@@ -1,0 +1,55 @@
+.card-wrap {
+  margin-bottom: 20px !important;
+  button {
+    margin-right: 20px;
+  }
+
+  .ant-btn-group button {
+    margin-right: 0;
+  }
+
+  .ant-spin {
+    margin-right: 20px
+  }
+}
+
+// 垂直水平居中
+.vertical-center {
+  text-align: center;
+  white-space: nowrap;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+
+  & .ant-modal {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+  }
+}
+
+// Carousel 图片轮播
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+  h3 {
+    color: rgba(246, 250, 33, 0.966);
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.slider-wrap .ant-carousel .slick-slide {
+  height: 240px !important;
+}
+
+

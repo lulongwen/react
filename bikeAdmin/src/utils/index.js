@@ -1,6 +1,8 @@
 import moment from 'moment'
 import dayjs from 'dayjs'
 import JsonP from 'jsonp'
+// import axios from 'axios'
+// import { Modal } from 'antd'
 
 export const nowtime2 = () => moment().format('YYYY-MM-DD HH:mm:ss')
 export const nowtime = () => dayjs().format('YYYY-MM-DD HH:mm:ss')
