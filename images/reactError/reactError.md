@@ -29,3 +29,8 @@
 // this.handleAdd 方法没找到
 	this.handleAdd.bind(this) 
 ```
+
+
+## Import in body of module; reorder to top import/first
+* import 放在最上面，const 上面
+* import 语句应该放在最前面，至少要放到const定义变量的前面

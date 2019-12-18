@@ -19,7 +19,7 @@ import Loadings from 'views/UI/Loadings'
 import Login from 'views/Login'
 import Register from 'views/Login/Register'
 
-import Table from 'views/Table'
+import Tables from 'views/Table'
 import HighTable from 'views/Table/HighTable'
 
 import Order from 'views/Order'
@@ -66,8 +66,8 @@ const Router = () => (
               <Route path='/ui/carousels' component={Carousels}/>
               <Route path='/order' component={Order}/>
               
-              <Route path='/ui/table' component={Table}/>
-              <Route path='/hightable' component={HighTable}/>
+              <Route path='/table/basic' component={Tables}/>
+              <Route path='/table/high' component={HighTable}/>
               <Route path='/richtext' component={RichText}/>
               <Route path='/city' component={City}/>
               <Route path='/bikemap' component={BikeMap}/>

@@ -1,23 +1,32 @@
 # React组件的生命周期
 
+## React 生命周期
 ```js
+
 getDefaultProps
 
 getInitialState
 
-componentWillMount
+
+componentWillMount // 常用的，ajax请求数据，SSR不能用
+	->
+	UNSAFE_componentWillMount
 
 render
 
+componentDidMount // 常用的，ajax请求数据
 
-componentDidMount
 
 componentWillReceiveProps
-
+	->
+	UNSAFE_componentWillReceiveProps
 
 shouldComponentUpdate
 
+
 componentWillUpdate
+	->
+	UNSAFE_componentWillUpdate
 
 componentDidUpdate
 

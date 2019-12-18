@@ -5,6 +5,14 @@ const menuList = [
     key: 'home' // 路由的名字就是 key
   },
   {
+    title: '登录',
+    key: 'login'
+  },
+  {
+    title: '注册',
+    key: 'register'
+  },
+  {
     title: 'UI',
     key: 'ui',
     children: [
@@ -47,12 +55,12 @@ const menuList = [
     key: 'form',
     children: [
       {
-        title: '登录',
-        key: 'form/login',
+        title: '搜索表单',
+        key: 'form/search',
       },
       {
-        title: '注册',
-        key: 'form/reg',
+        title: '多个搜索条件',
+        key: 'form/searchmore',
       }
     ]
   },

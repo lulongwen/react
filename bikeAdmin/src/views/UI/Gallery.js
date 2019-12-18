@@ -16,7 +16,7 @@ class Gallery extends Component {
   
   render () {
     const imgList = imgs.map(list => list.map(item => {
-      let img = <img
+      let img = <img alt=''
         key={`gallery_${item}`}
         src={`/assets/gallery/${item}`}
         onClick={() => this.fnOpen(item)} />
@@ -47,7 +47,7 @@ class Gallery extends Component {
           maskClosable={false}
           visible={this.state.visible}
           onCancel={this.fnCancel}>
-          <img src={this.state.url} style={{width: '100%'}}/>
+          <img src={this.state.url} style={{width: '100%'}} alt=''/>
         </Modal>
       </div>
     )

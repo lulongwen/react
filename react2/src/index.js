@@ -8,6 +8,7 @@ import ReactDOM from 'react-dom'
 
 // import Router from './ReactHooks/ContextType'
 // import Router from './ReactHooks/lazy/componentDidCatch'
-import Router from './ReactHooks/memo/Memo'
+// import Router from './ReactHooks/memo/Memo'
+import Router from './ReactHooks/useState'
 
 ReactDOM.render(<Router />, document.getElementById('root'))

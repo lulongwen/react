@@ -5,7 +5,7 @@ class Life extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      number: 1;
+      number: 1
     }
   }
   // state 的简洁语法，声明 state
@@ -20,7 +20,7 @@ class Life extends Component {
     }
     return (
       <div style={style}>
-        <button onClick={fnClick}>点击</button>
+        <button onClick={this.fnClick}>点击</button>
       </div>
     )
   }
@@ -28,7 +28,7 @@ class Life extends Component {
   // 箭头函数代替 this.fnClick.bind(this)
   fnClick = () => {
     this.setState(() => {
-      number: this.state.number++;
+      this.state.number++
     })
   }
 }

@@ -1,5 +1,5 @@
 import * as $ from "./actionTypes";
-// dispatch({type: '类型', value: '值'})
+// dispatch({type: '类型', value: '值'})  type 事件类型
 
 // menu
 export const actionInitMenu = data => ({

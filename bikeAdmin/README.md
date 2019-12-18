@@ -1,15 +1,29 @@
 # React 全家桶 + Antd 后台管理系统
 
 * 技术选型
+    * react + react-router-dom + react-redux + axios + echarts + 高德地图
 * 项目架构
     * 页面结构
     * 目录结构
     * 栅格系统
-* 项目规范
+* 项目工程化
+    * Mock 数据
+    * axios 封装
+    * loading 处理，错误拦截
+* 项目规范开发
 * 封装项目公共组件
 	* 丰富的组件
 * 提高开发效率
 	* 前沿的前端技术栈
+* 业务类型
+    * 基础 UI
+    * 增删改查
+    * 地图
+    * 图表
+    * 权限
+    * 菜单
+    * 公共机制
+    * 主题定制
 	
 
 ```bash
@@ -42,7 +56,11 @@ yarn add axios react-router
 
 ## react-router-dom 文档
 * [react training](https://reacttraining.com/react-router/web/guides/quick-start)
-
+* 匹配路由
+```jsx
+    // 去除 hash 的 # 和参数
+    window.location.hash.replace(/#|\?.*$/, '')
+```
 
 ## 工具文档
 * [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)

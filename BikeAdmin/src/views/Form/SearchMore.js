@@ -3,7 +3,7 @@ import { Form, Input, Button, message, Icon, Checkbox } from 'antd'
 
 const { FormItem } = Form
 
-class Login extends Component {
+class SearchMore extends Component {
   state = { visible: false }
   
   render () {
@@ -34,4 +34,4 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default SearchMore
